@@ -14,7 +14,7 @@ class ListAllUsersUseCase {
       throw new Error("Id Not Found");
     }
     if (!user.admin) {
-      throw new Error("User have not permission");
+      throw new Error("User is not an administrator");
     }
 
     return this.usersRepository.list();
